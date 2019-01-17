@@ -1,0 +1,15 @@
+Rodam do lado do servidor
+para criação de webService
+-express   
+-sails.js
+-koa
+
+chain of responsability 
+ou midware - muito presente no express
+
+Outro framework interesante
+graphQL.js
+
+
+postman - programa que testa a aplicação(no backend) em suas diversas requisições
+

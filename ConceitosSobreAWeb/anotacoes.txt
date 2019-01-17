@@ -1,0 +1,83 @@
+http é um protocolo 
+-stateless - não tem estado
+-cliente servidor - requisição e resposta
+opera em TCP/IP
+RESPOSTAS EM HTML, CSS, JS, MIDIAS...
+
+Metodos http
+-get
+-post
+-put
+-delete
+-trace
+-options
+-connect 
+-head
+
+Requisição do tipo GET
+host: url - parametros vão todos na url
+
+
+Requisição do tipo POST
+parametros vão no corpo da requisição
+
+grupos de status de mensagem HTTP 
+1xx - Informação
+2xx - Sucesso
+3xx - redirecionamento - necessario refazer um redirecionamento
+4xx - erro no Cliente - requisição com valores invalidos
+5xx - Erro no Servidor
+
+
+CONCEITO DE SERVIDOR WEB
+pode dividir pagina em servidores diferentes, estaticos e dinamicos
+virtual hosting
+web stack
+redes do tipo cdn
+
+Client side vs Sever side
+Evolução de Arquiteturas
+-mainframe
+-client-server
+-web-server-side
+-front-end + services ou client side (Single Page Aplication)
+frameworks
+-react 
+-view
+-angular
+
+Conteudo estatico vs Dinamico
+server side - estatico ou Dinamico
+client side - estatico ou dinamico 
+
+HTML, CSS, JS
+
+DNS
+Traduz os nomes de domínio em endereço IP
+Funciona sobre o protocolo UDP na porta 53
+1-Usuário informa endereço no browser
+2-Computador efetua uma consulta DNS para servidor local 
+3-O servidor responde com o endereço IP
+4-Computador acessa o servidor a partir do IP obtido
+Busca recursiva
+busca iterativa
+DNS Records
+A-IPv4
+AAAA-IPv6
+MX-Servidor de Email
+NS-Servidor DNS
+CNAME-Canonical Name(Apelino)
+
+HTTPSeguro - HTTPS 
+-HTTP+TLS (SSLv4)
+-HTTP+SSL 
+let's encrypt - pesquisar
+
+WEB SERVICE 
+SOAP - Simple Object Access Protocol (Usa XML, WSDL, RPC burocratico)
+REST - Representational State Transfer (Usa JSON, HTTP, simples)
+-URL-Metodo-Descrição
+(metodo-POST-GET-PUT-DELETE-)(CRUD)
+Arquiteturas
+SOA
+Micro services

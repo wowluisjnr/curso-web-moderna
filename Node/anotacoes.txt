@@ -1,0 +1,9 @@
+utilizados em projeto(na pasta projeto)
+-express - acesso aos dados
+-nodemon - nodemon executa o projeto no cmd
+-node-schedule
+
+
+-postman - programa que ajuda no desenvolvimento de aplicações rest
+            testando as requisições
+
