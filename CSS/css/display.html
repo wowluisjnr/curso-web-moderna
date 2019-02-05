@@ -6,6 +6,28 @@
     <title>Display</title>
     <style>
         /* ... */
+        body{
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+
+        ul{padding: 0;}
+        div{background-color: seagreen;}
+        span{background-color: dodgerblue;}
+        li{background-color: purple;}
+
+        div, span, li {
+            width: 50%; /*Unidade relativa*/
+            width: 200px; /*Valor absoluto*/
+            height: 80px;
+            padding-top: 30px;
+            text-align: center;
+            display: block;   /* faz com que cada elemento fique em sua propria linha*/
+            display: inline;  /*só considera o padding. Com display inline wdth heigth margin top e dow são desconsideradas*/
+            display: inline-block;/*Leva em consideração autura e largura*/
+        }
+
     </style>
 </head>
 

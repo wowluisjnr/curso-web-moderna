@@ -5,7 +5,32 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+        /*  Todo elemento CSS/Html é um boxModel que é composto de
+            content, padding, border e margin
+            content- Conteudo
+            padding-espaço entre o border e o content
+            margin-espaço entre os elementos
+            
+            shortcut
+            
+            */
+        
+        body {font-size: 80px; margin: 0px;}
+        .c1 {background-color: orange;}
+        .c2 {background-color: skyblue;}
+        .c3 {background-color: tomato;}
+
+        div {
+            float: left;  /* Perde o conceito de block e Faz com que os elementos caiam para esquerda*/
+            padding-top: 100px;
+            padding: 10px 50px 100px 150px;
+            padding: 100px 50px;
+            padding: 50px;
+            margin: 0px 20px;
+            border: solid 15px black;
+        }
+
+
     </style>
 </head>
 
