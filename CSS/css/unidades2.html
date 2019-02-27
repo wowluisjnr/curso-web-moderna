@@ -5,6 +5,23 @@
     <title>Unidades #02</title>
     <style>
         /* ... */
+        .fora {
+            position: relative;
+            background-color: orange;
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+        }
+
+        .dentro {
+            background-color: mediumvioletred;
+            height: 100px;
+            width: 100%;
+            position:static;/*Position padrão- ocumpa somente o espaço do conteudo*/
+            position: relative;/**/
+            position:absolute;/*Considera o conteudo maiso o padding*/
+            /*position: fixed; /*Leva em consideração o tamanho do viewport*/
+        }
     </style>
 </head>
 <body>
