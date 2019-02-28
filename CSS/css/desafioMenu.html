@@ -24,8 +24,9 @@
             border-bottom: solid 5px #4faddb;
             height: 80px;
             box-sizing: content-box;
-        }
 
+        }
+        
         .logo {
             display: inline-block;
             height: 80px;
@@ -34,6 +35,7 @@
 
         .logo img {
             height: 100%;
+            width: auto;
         }
 
         .menu-toggle {
@@ -48,12 +50,14 @@
             
         }
 
+
         .menu {
             display: inline-block;
             vertical-align: top;
             height: 80px;
             padding: 25px;
         }
+
 
         .menu ul {
             margin: 0;
@@ -78,7 +82,6 @@
             float:right;
             height: 80px;
             padding: 25px;
-            
         }
 
         .menu a:hover,
@@ -86,6 +89,7 @@
             background-color: #4faddb;
             color: #000;
         }
+
 
         .botao {
             border-radius: 30px;
@@ -106,11 +110,8 @@
         }
         @media (max-width:910px){
             .autenticacao {display: none;}
-        }
-        
+        }      
 
-        
-        
     </style>
 </head>
 
@@ -118,7 +119,7 @@
     <header class="cabecalho">
         <div class="logo">
             <a href="#inicio">
-                <img src="http://files.cod3r.com.br/curso-web/logo.png" width="auto" height="auto" alt="Logo" />
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
             </a>
         </div><!--            
         --><button class="menu-toggle">
@@ -127,7 +128,7 @@
         --><nav class="menu">
             <ul>
                 <li>
-                    <a href="#inicio">Início</a>
+                    <a href="#inicio" class="selected">Início</a>
                 </li>
                 <li>
                     <a href="#cursos">Cursos</a>
@@ -148,7 +149,6 @@
 
     <script>
         // ...
-
         window.onhashchange=function(e){
             const oldURL = e.oldURL.split('#')[1]
             const newURL = e.newURL.split('#')[1]
@@ -157,6 +157,7 @@
             const newMenu = document.querySelector(`.menu [href='#${newURL}']`)
             oldMenu && oldMenu.classList.remove('selected')
             newMenu && newMenu.classList.add('selected')
+
 
         }
     </script>
