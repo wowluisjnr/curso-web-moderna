@@ -13,7 +13,7 @@ function Barreira(reversa =false){
     this.elemento.appendChild(reversa ? borda : corpo)
 
     this.setAltura = altura => {
-        console.log(altura)
+        //console.log(altura)
         corpo.style.height = `${altura}px`
     }    
 }
@@ -32,7 +32,7 @@ function ParDeBarreiras(altura, abertura, x){
     this.sortearArbetura = () => {
         const alturaSuperior = Math.random() * (altura - abertura)
         const alturaInferior = altura - abertura - alturaSuperior
-        console.log(alturaSuperior, alturaInferior)
+        //console.log(alturaSuperior, alturaInferior)
         this.superior.setAltura(alturaSuperior)
         this.inferior.setAltura(alturaInferior)
     }
@@ -74,12 +74,43 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto){
     }
 }
 
+function Passaro(alturaJogo){
+    let voando = false
+
+    this.elemento = novoElemento('img', 'passaro')
+    this.elemento.src = 'imgs/passaro.png'
+
+    this.getY = () => parseInt(this.elemento.style.bottom.split('px')[0])
+    this.setY = y => this.elemento.style.bottom = `${y}px`
+
+    window.onkeydown = e => voando = true
+    window.onkeyup = e => voando = false
+
+    this.animar =() =>{
+        const novoY= this.getY()+(voando ? 8 : -5)
+        const alturaMaxima=alturaJogo - this.elemento.clientWidth
+
+        if(novoY <=0){
+            this.setY(0)
+        }else if(novoY >= alturaMaxima){
+            this.setY(alturaMaxima)
+        }else{
+            this.setY(novoY)
+        }
+
+        this.setY(alturaJogo/2)
+    }
+}
+
 const barreiras = new Barreiras(500,1000,200,400)
+const passaro = new Passaro(500)
 const areaDoJogo = document.querySelector('[wm-flappy]')
-console.log(barreiras)
+
+areaDoJogo.appendChild(passaro.elemento)
 barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
 setInterval(() => {
     barreiras.animar()
+    passaro.animar()
 }, 20)
 
 
