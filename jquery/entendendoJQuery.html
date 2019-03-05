@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        // ...
+        $('div').hide(5000).show(5000).fadeOut(5000) //chama uma ao final de uma chama a outra
+        console.log($('div').get(1))
+        console.log($.isEmptyObject({nome: null}))//é um objeto vasio
+        console.log($.inArray(3, [1,2,3])) //retorna o indice em que o elemento esta no array, caso não esteja -1
+
+        //adicionando minhas funções ao jquery
+        $.fn.fundoVerde = function(){
+            this.css('background-color', 'green')
+            return this //com return alem da função criada eu permito encadear chamadas
+        }
+        $('body').fundoVerde().fadeOut(1000)
+    </script>
+</body>
