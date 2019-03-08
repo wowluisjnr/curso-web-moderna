@@ -1,2 +1,2 @@
 import './sass/index.scss'
-import '../index.html'
+import './imgs/logo.png'

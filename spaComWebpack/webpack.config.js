@@ -9,6 +9,10 @@ module.exports = {
         filename:'app.min.js',
         path: __dirname + '/buildWebpack/assets'
     },
+    devServer:{
+        contentBase: "./buildWebpack",
+        port:9000
+    },
     optimization:{
         minimizer:[
             new OptimizeCSSAssetsPlugin({})
@@ -30,12 +34,6 @@ module.exports = {
         },{
             test:/\.(png|svg|jpg|gif)$/,
             use:['file-loader']
-        },{
-            test:/\.html$/,
-            use:[{
-                loader:'html-loader'
-
-            }]
         }]
     }
 }
