@@ -1,1 +1,5 @@
 npm init -y //cria um package.json
+
+pradrão de modulos
+-commus js
+-e do ecmascript 
