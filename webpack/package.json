@@ -1,5 +1,5 @@
 {
-  "name": "capitulowebpack",
+  "name": "capitulo-webpack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "start": "webpack"
   },
   "keywords": [],
-  "author": "Cod3r",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "webpack": "4.8.1",
