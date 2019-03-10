@@ -1,0 +1,2 @@
+npm init -y // cria um arquivo json
+    "start":"json-server --watch db.json --port 3001"
